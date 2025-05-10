@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Task Tracker</title>
+  <meta name="viewport" content="width=1200">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Helvetica Neue', Helvetica, Arial, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+      background: #f7f7f7;
+      color: #222;
+      min-width: 1200px;
+    }
+    .cover-section {
+      width: 100%;
+      max-width: 1200px;
+      margin: 32px auto 0 auto;
+      position: relative;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+      background: #ededed;
+    }
+    .cover-img {
+      width: 100%;
+      display: block;
+      border-radius: 24px;
+    }
+    .cover-text {
+      position: absolute;
+      left: 48px;
+      bottom: 48px;
+      color: #fff;
+      text-shadow: 0 4px 24px rgba(0,0,0,0.25);
+    }
+    .cover-title {
+      font-size: 54px;
+      font-weight: bold;
+      margin-bottom: 12px;
+    }
+    .cover-role {
+      font-size: 28px;
+      color: #e0e0e0;
+    }
+    @media (max-width: 1200px) {
+      .cover-section {
+        max-width: 98vw;
+      }
+      .cover-title {
+        font-size: 7vw;
+      }
+      .cover-role {
+        font-size: 3vw;
+      }
+      .cover-text {
+        left: 5vw;
+        bottom: 5vw;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a href="/" class="back-home-btn">
+    <span class="arrow">&#8592;</span> Home
+  </a>
+  <div class="cover-section">
+    <img src="/static/Cover1.png" alt="Task Tracker 封面" class="cover-img">
+    <div class="cover-text">
+      <div class="cover-title">Task Tracker</div>
+      <div class="cover-role">Product Manager</div>
+    </div>
+  </div>
+  <div class="content-section">
+    <div class="overview-title">PROJECT OVERVIEW</div>
+    <div class="main-title">Task Tracker</div>
+    <div class="overview-desc">
+      Task Tracker, a process operation platform designed to provide an efficient project management solution. Since the launch of its first version, user complaints have persisted, with many expressing frustration over inefficiencies that hinder productivity. This engagement aimed to enhance productivity, improve overall company efficiency, and reduce outsourcing costs.<br><br>
+      As a product manager, I led user research, defined requirements, and prioritized features to enhance Task Tracker. I also introduced a team management module to improve oversight, streamline workflows, and boost efficiency.
+    </div>
+    <div class="objectives-title">OBJECTIVES</div>
+    <ul class="objectives-list">
+      <li><b>Improving project management efficiency</b> through streamlined task allocation and automated tracking.</li>
+      <li><b>Enhancing team transparency</b> by ensuring balanced task distribution and reducing manual inefficiencies.</li>
+      <li><b>Reducing costs</b> by cutting outsourcing expenses by at least 20% through better internal workload management.</li>
+    </ul>
+    <div class="info-table">
+      <div class="info-row">
+        <div class="info-cell"><b>Client</b><br>CCBFT</div>
+        <div class="info-cell"><b>Services</b><br>Product Manager<br>UX Reseacher</div>
+        <div class="info-cell"><b>Year</b><br>2023</div>
+        <div class="info-cell"><b>Duration</b><br>20 weeks</div>
+      </div>
+    </div>
+    <div class="divider"></div>
+    <div class="problem-section">
+      <div class="problem-title">Problem Exists</div>
+      <div class="problem-desc">
+        Since its launch, the Task Tracker platform has faced ongoing complaints. Tasks now take <b>twice as long to complete</b>, and the lack of project visibility makes <b>team management challenging</b> for project managers.
+      </div>
+    </div>
+    <div class="pain-section">
+      <div class="pain-title">User Pain Points</div>
+      <div class="pain-subtitle">Collaborating with UX researchers, we conducted nine structured user interviews across three user segments: developers, team managers, and project managers.</div>
+      <div class="pain-list">
+        <div class="pain-item">
+          <div class="pain-num">1</div>
+          <div class="pain-content">
+            <div class="pain-item-title"><b>Usability problems</b></div>
+            <div class="pain-item-desc">The system's workflow is fragmented, making task tracking inefficient. The interface design is not intuitive, requiring extra effort to navigate. Additionally, missing essential features limit users' ability to complete tasks efficiently.</div>
+          </div>
+        </div>
+        <div class="pain-item">
+          <div class="pain-num">2</div>
+          <div class="pain-content">
+            <div class="pain-item-title"><b>System Accessibility Constraints</b></div>
+            <div class="pain-item-desc">The platform frequently logs users out, disrupting workflow. Slow loading times cause delays, reducing productivity. Poor browser compatibility leads to inconsistent experiences across different devices.</div>
+          </div>
+        </div>
+        <div class="pain-item">
+          <div class="pain-num">3</div>
+          <div class="pain-content">
+            <div class="pain-item-title"><b>Project Management Challenges</b></div>
+            <div class="pain-item-desc">Users misinterpret task value calculations, causing scoring inconsistencies. Frequent requirement changes further disrupt evaluations, leading to inaccurate performance assessments. Data discrepancies across modules weaken decision reliability.</div>
+          </div>
+        </div>
+        <div class="pain-item">
+          <div class="pain-num">4</div>
+          <div class="pain-content">
+            <div class="pain-item-title"><b>Team Management Challenges</b></div>
+            <div class="pain-item-desc">The team lacks visibility into workload distribution, forcing project managers to assign tasks based on intuition. This leads to imbalances, with some employees overloaded while others remain idle, reducing efficiency and complicating resource management.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="flow-section">
+      <div class="flow-title">Optimizing User Flow</div>
+      <div class="flow-desc">
+        After a week of daily discussions with stakeholders and core users, we identified workflow bottlenecks in the Task Tracker and explored feature improvements to enhance efficiency.<br><br>
+        Discussions with team managers and leaders highlighted the need for a real-time team task board to optimize task allocation, prevent idle time, and ensure timely project delivery.
+      </div>
+    </div>
+    <div class="wrong-section">
+      <div class="wrong-title">WHAT WENT WRONG</div>
+      <div class="wrong-desc">
+        Initially, I thought the project was simply about rebuilding task assignment to improve efficiency and enable developers to automatically update project progress. However, through in-depth conversations with stakeholders, I realized that our ultimate goal was to reduce outsourcing costs.
+      </div>
+      <div class="solved-title">HOW I SLOVED IT</div>
+      <div class="solved-desc">
+        To reduce time spent on Task Tracker and let teams focus on the project, we redesigned workflows. Project managers can now bulk import and auto-assign tasks, while developers receive real-time progress updates and can batch-approve via mobile, flagging issues as needed. A new team management module enables real-time monitoring, allowing managers to reassign tasks proactively, ensuring optimal resource utilization.
+      </div>
+    </div>
+    <div class="results-section">
+      <div class="results-title">Key Results</div>
+      <div class="results-content">
+        <img src="/static/hero.png" alt="Key Results" class="results-img">
+        <div class="results-text">
+          <div>Streamlined the process, reducing</div>
+          <div class="results-bold">3 Hours (45%) of Time</div>
+          <br>
+          <div>Introduced Team Management, boosting</div>
+          <div class="results-bold">Task Complete rate over 90%</div>
+          <br>
+          <div>Integrated resources, cutting</div>
+          <div class="results-bold">28.03% ($0.55M/M) Costs</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="contact-footer">
+    <div class="contact-title">Contact me</div>
+    <a class="contact-email" href="mailto:shaolzr@uw.edu">shaolzr@uw.edu</a>
+  </footer>
+  <style>
+    .content-section {
+      max-width: 700px;
+      margin: 48px auto 0 auto;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.04);
+      padding: 48px 48px 32px 48px;
+    }
+    .overview-title {
+      color: #555;
+      font-size: 20px;
+      letter-spacing: 1px;
+      margin-bottom: 18px;
+    }
+    .main-title {
+      font-size: 40px;
+      font-weight: bold;
+      margin-bottom: 24px;
+    }
+    .overview-desc {
+      font-size: 18px;
+      color: #222;
+      margin-bottom: 48px;
+      line-height: 1.7;
+    }
+    .objectives-title {
+      color: #555;
+      font-size: 20px;
+      letter-spacing: 1px;
+      margin-bottom: 18px;
+      margin-top: 32px;
+    }
+    .objectives-list {
+      font-size: 17px;
+      color: #222;
+      margin-bottom: 40px;
+      padding-left: 18px;
+    }
+    .objectives-list li {
+      margin-bottom: 10px;
+      line-height: 1.6;
+    }
+    .info-table {
+      width: 100%;
+      margin: 32px 0 24px 0;
+      border-top: 1px solid #ddd;
+      border-bottom: 1px solid #ddd;
+      padding: 18px 0;
+    }
+    .info-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 24px;
+    }
+    .info-cell {
+      font-size: 16px;
+      color: #222;
+      min-width: 120px;
+    }
+    .info-link {
+      color: #2a4cff;
+      text-decoration: underline;
+      font-weight: 500;
+    }
+    .divider {
+      height: 2px;
+      background: #e5e5e5;
+      margin: 32px 0 32px 0;
+      border-radius: 1px;
+    }
+    .problem-section {
+      margin-top: 32px;
+    }
+    .problem-title {
+      font-size: 32px;
+      font-weight: bold;
+      margin-bottom: 18px;
+    }
+    .problem-desc {
+      font-size: 18px;
+      color: #222;
+      line-height: 1.7;
+    }
+    .pain-section {
+      margin-top: 64px;
+      margin-bottom: 32px;
+    }
+    .pain-title {
+      font-size: 36px;
+      font-weight: bold;
+      margin-bottom: 18px;
+      text-align: center;
+      margin-top: 32px;
+    }
+    .pain-subtitle {
+      font-size: 18px;
+      color: #444;
+      text-align: center;
+      margin-bottom: 36px;
+      margin-top: 8px;
+    }
+    .pain-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 32px 48px;
+    }
+    .pain-item {
+      width: 320px;
+      max-width: 90vw;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 32px;
+    }
+    .pain-num {
+      width: 44px;
+      height: 44px;
+      border: 2px solid #ffb84d;
+      color: #ffb84d;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      font-weight: bold;
+      margin-bottom: 18px;
+      margin-top: 8px;
+    }
+    .pain-content {
+      text-align: left;
+    }
+    .pain-item-title {
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+    .pain-item-desc {
+      font-size: 15px;
+      color: #222;
+      line-height: 1.7;
+    }
+    @media (max-width: 900px) {
+      .content-section {
+        max-width: 98vw;
+        padding: 24px 8vw 18px 8vw;
+      }
+      .info-row {
+        flex-direction: column;
+        gap: 8px;
+      }
+      .pain-list {
+        flex-direction: column;
+        gap: 0;
+      }
+      .pain-item {
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 24px;
+      }
+    }
+    .flow-section {
+      margin-top: 64px;
+      margin-bottom: 32px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.04);
+      padding: 48px 48px 32px 48px;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .flow-title {
+      font-size: 40px;
+      font-weight: bold;
+      margin-bottom: 24px;
+      text-align: center;
+    }
+    .flow-desc {
+      font-size: 18px;
+      color: #222;
+      margin-bottom: 36px;
+      line-height: 1.7;
+      text-align: center;
+    }
+    .wrong-section {
+      margin-top: 64px;
+      margin-bottom: 32px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.04);
+      padding: 48px 48px 32px 48px;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .wrong-title {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 18px;
+      letter-spacing: 1px;
+    }
+    .wrong-desc {
+      font-size: 17px;
+      color: #222;
+      margin-bottom: 36px;
+      line-height: 1.7;
+    }
+    .solved-title {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 18px;
+      letter-spacing: 1px;
+    }
+    .solved-desc {
+      font-size: 17px;
+      color: #222;
+      margin-bottom: 0;
+      line-height: 1.7;
+    }
+    @media (max-width: 900px) {
+      .flow-section, .wrong-section {
+        max-width: 98vw;
+        padding: 24px 8vw 18px 8vw;
+      }
+    }
+    .results-section {
+      margin-top: 64px;
+      margin-bottom: 64px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.04);
+      padding: 48px 48px 32px 48px;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .results-title {
+      font-size: 40px;
+      font-weight: bold;
+      margin-bottom: 32px;
+      text-align: center;
+    }
+    .results-content {
+      display: flex;
+      align-items: center;
+      gap: 48px;
+      justify-content: center;
+    }
+    .results-img {
+      width: 260px;
+      height: 260px;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+      background: #f3f3f3;
+    }
+    .results-text {
+      font-size: 20px;
+      color: #222;
+      line-height: 1.7;
+      min-width: 260px;
+      max-width: 340px;
+    }
+    .results-bold {
+      font-size: 24px;
+      font-weight: bold;
+      margin: 6px 0 6px 0;
+    }
+    @media (max-width: 900px) {
+      .results-section {
+        max-width: 98vw;
+        padding: 24px 8vw 18px 8vw;
+      }
+      .results-content {
+        flex-direction: column;
+        gap: 24px;
+      }
+      .results-img {
+        width: 90vw;
+        height: auto;
+        max-width: 320px;
+      }
+      .results-text {
+        min-width: 0;
+        max-width: 100%;
+        font-size: 18px;
+      }
+      .results-bold {
+        font-size: 20px;
+      }
+    }
+    .contact-footer {
+      width: 100%;
+      text-align: center;
+      margin: 80px 0 40px 0;
+    }
+    .contact-title {
+      font-size: 48px;
+      color: #222;
+      margin-bottom: 24px;
+    }
+    .contact-email {
+      display: inline-block;
+      background: #111;
+      color: #888;
+      font-size: 38px;
+      padding: 18px 48px;
+      border-radius: 6px;
+      letter-spacing: 1px;
+      margin-top: 8px;
+      font-family: 'Helvetica Neue', Helvetica, Arial, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+      text-decoration: underline;
+      font-weight: 600;
+      transition: color 0.2s;
+    }
+    .contact-email:hover {
+      color: #fff;
+    }
+    .back-home-btn {
+      position: fixed;
+      top: 32px;
+      left: 32px;
+      z-index: 1000;
+      background: #fff;
+      color: #222;
+      font-size: 22px;
+      font-weight: 500;
+      border-radius: 24px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+      padding: 10px 24px 10px 18px;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      transition: box-shadow 0.2s, background 0.2s;
+    }
+    .back-home-btn:hover {
+      background: #f3f3f3;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.16);
+    }
+    .back-home-btn .arrow {
+      font-size: 26px;
+      margin-right: 8px;
+    }
+  </style>
+</body>
+</html> 

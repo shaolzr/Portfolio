@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Shao-Lin Portfolio</title>
+  <meta name="viewport" content="width=1200">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Helvetica Neue', Helvetica, Arial, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+      background: #fff;
+      color: #222;
+      min-width: 1200px;
+    }
+    .container {
+      width: 1200px;
+      margin: 0 auto;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 32px 0 0 0;
+    }
+    .logo {
+      font-weight: bold;
+      font-size: 22px;
+      letter-spacing: 2px;
+    }
+    .nav {
+      display: flex;
+      gap: 32px;
+      font-size: 20px;
+    }
+    .main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-top: 80px;
+    }
+    .name {
+      font-size: 180px;
+      font-weight: 400;
+      letter-spacing: 2px;
+      margin-bottom: 24px;
+      line-height: 1;
+    }
+    .info-row {
+      display: flex;
+      justify-content: space-between;
+      width: 600px;
+      font-size: 28px;
+      margin-bottom: 24px;
+    }
+    .desc {
+      color: #666;
+      font-size: 20px;
+      width: 800px;
+      text-align: center;
+      margin: 0 auto;
+      line-height: 1.5;
+    }
+    .cover-img {
+      width: 100%;
+      max-width: 900px;
+      display: block;
+      margin: 40px auto 0 auto;
+      border-radius: 12px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+    }
+    .project-section {
+      width: 100%;
+      background: #ededed;
+      min-height: 420px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      margin-top: 80px;
+      padding: 0;
+      border-radius: 32px;
+      transition: background 0.3s;
+      cursor: pointer;
+    }
+    .project-link:hover .project-section {
+      background: #d8d8d8;
+    }
+    .project-content {
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-start;
+      width: 1100px;
+      max-width: 95vw;
+      padding: 48px 0 48px 0;
+      gap: 48px;
+    }
+    .project-text {
+      flex: 1;
+      align-self: flex-end;
+      margin-bottom: 32px;
+    }
+    .project-role {
+      font-size: 22px;
+      color: #888;
+      margin-bottom: 12px;
+    }
+    .project-title {
+      font-size: 48px;
+      font-weight: bold;
+      color: #222;
+      letter-spacing: 1px;
+    }
+    .project-img {
+      width: 500px;
+      max-width: 40vw;
+      border-radius: 16px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+      background: #fff;
+      display: block;
+    }
+    @media (max-width: 1200px) {
+      .container {
+        width: 100vw;
+        min-width: 0;
+      }
+      .main .name {
+        font-size: 12vw;
+      }
+      .info-row, .desc {
+        width: 90vw;
+        font-size: 4vw;
+      }
+      .desc {
+        font-size: 2vw;
+      }
+      .cover-img {
+        max-width: 95vw;
+      }
+      .project-section {
+        min-height: 180px;
+      }
+      .project-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+        width: 95vw;
+        padding: 24px 0 24px 0;
+      }
+      .project-img {
+        width: 90vw;
+        max-width: 95vw;
+      }
+      .project-title {
+        font-size: 7vw;
+      }
+    }
+    .contact-footer {
+      width: 100%;
+      text-align: center;
+      margin: 80px 0 40px 0;
+    }
+    .contact-title {
+      font-size: 32px;
+      color: #222;
+      margin-bottom: 24px;
+    }
+    .contact-email {
+      display: inline-block;
+      background: #111;
+      color: #888;
+      font-size: 22px;
+      padding: 12px 36px;
+      border-radius: 2px;
+      letter-spacing: 1px;
+      margin-top: 8px;
+      font-family: 'Helvetica Neue', Helvetica, Arial, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+    }
+    .project-link {
+      text-decoration: none;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="logo">SL</div>
+    </div>
+    <div class="main">
+      <div class="name">Shao-Lin</div>
+      <div class="info-row">
+        <div>Linzhenrong Shao</div>
+        <div>Product manager</div>
+      </div>
+      <div class="desc">
+        Product Manager with a strong background in financial services and business operations, skilled in leading cross-functional teams to address user needs and enhance operational efficiency. Passionate about leveraging AI to create human-centric products.
+      </div>
+    </div>
+    <a href="/task_tracker" class="project-link">
+      <section class="project-section">
+        <div class="project-content">
+          <div class="project-text">
+            <div class="project-role">Product Manager</div>
+            <div class="project-title">Task Tracker</div>
+          </div>
+          <img src="/static/Cover1.png" alt="Task Tracker 封面" class="project-img">
+        </div>
+      </section>
+    </a>
+    <footer class="contact-footer">
+      <div class="contact-title">Contact me</div>
+      <a class="contact-email" href="mailto:shaolzr@uw.edu">shaolzr@uw.edu</a>
+    </footer>
+  </div>
+</body>
+</html> 
